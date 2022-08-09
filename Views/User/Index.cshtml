@@ -1,0 +1,12 @@
+﻿@model LieTunesReview.Models.ViewModels.UserSelectViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Select a User</h1>
+
+<form asp-action="SongList">
+    <select asp-items=@Model.Users name="id"></select>
+    <button type="submit">Go</button>
+</form>

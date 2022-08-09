@@ -1,0 +1,28 @@
+﻿@model IEnumerable<LieTunesReview.Models.Song>
+
+@{
+    ViewData["Title"] = "SongList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1><span>@ViewBag.UserName</span><span>'s Songs</span></h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.Title
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
