@@ -1,0 +1,14 @@
+﻿@model LieTunesReview.Models.ViewModels.TopSellingViewModel
+
+<h2>Winners of Capitalism</h2>
+
+<h3>Best-Selling Song: @Model.TopSellingSong.Title (@Model.TopSellingSong.UserSongs.Count Sales)</h3>
+<h3>Best-Selling Artist: @Model.TopSellingArtist.Name</h3>
+
+<h3>Best-Rated Songs:</h3>
+<ol>
+    @foreach(Song s in @Model.TopThreeRatedSongs)
+    {
+        <li>@s.Title (@s.UserSongs.Average(us => us.Rating))</li>
+    }
+</ol>

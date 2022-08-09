@@ -14,7 +14,8 @@ namespace LieTunesReview.Models
 
         public int Id { get; set; }
         public string Name { get; set; } = null!;
+        public double Wallet { get; set; }
 
-        public virtual ICollection<UserSong> UserSongs { get; set; }
+        public virtual ICollection<UserSong> UserSongs{ get; set; }
     }
 }
